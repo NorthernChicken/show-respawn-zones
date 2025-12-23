@@ -1,0 +1,1450 @@
+[gd_scene load_steps=102 format=3 uid="uid://dfkaurhqljrps"]
+
+[ext_resource type="Texture2D" uid="uid://b0pyijk2iaoul" path="res://modules/gui/logo/logo_no_outlines_small.png" id="1"]
+[ext_resource type="Script" uid="uid://cju3tmuh2dkj" path="res://modules/main_menu/main_menu.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://c1tjsac8upbdu" path="res://modules/gui/scenes/game_button.tscn" id="3"]
+[ext_resource type="Shader" uid="uid://b825s3pvo4esp" path="res://modules/gui/shaders/checkerboard.gdshader" id="4"]
+[ext_resource type="FontFile" uid="uid://6u06qhch05kc" path="res://modules/gui/fonts/rubik/Rubik-ExtraBold.ttf" id="5"]
+[ext_resource type="Material" uid="uid://bjhjp2bs23fly" path="res://modules/gui/shaders/gray_checkerboard.tres" id="6"]
+[ext_resource type="Material" uid="uid://cli8bi6o1qj3w" path="res://modules/gui/shaders/black_checkerboard.tres" id="7"]
+[ext_resource type="Texture2D" uid="uid://clhev7xyk3o4p" path="res://addons/kenney/kenney_input-prompts/Xbox Series/Default/xbox_rt.png" id="8"]
+[ext_resource type="Script" uid="uid://devf7a3o1o15i" path="res://addons/input_prompts/action_prompt/action_prompt.gd" id="9"]
+[ext_resource type="Texture2D" uid="uid://7cud5ivj3i2h" path="res://addons/kenney/kenney_input-prompts/Xbox Series/Default/xbox_lt.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bi1xqsdk5qnuh" path="res://addons/kenney/kenney_input-prompts/Xbox Series/Default/xbox_stick_l_left.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://cyo8fm5svh3ub" path="res://addons/kenney/kenney_input-prompts/Xbox Series/Default/xbox_stick_l_right.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://d0e4d3qkfhs26" path="res://addons/kenney/kenney_input-prompts/Xbox Series/Default/xbox_button_color_a.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://b81jigiopy5fr" path="res://addons/kenney/kenney_input-prompts/Xbox Series/Default/xbox_button_color_b.png" id="14"]
+[ext_resource type="PackedScene" uid="uid://ph083qny1600" path="res://modules/main_menu/lobby_menu.tscn" id="15"]
+[ext_resource type="FontFile" uid="uid://botrnnm1etlqg" path="res://modules/gui/fonts/rubik/Rubik-Bold.ttf" id="16"]
+[ext_resource type="PackedScene" uid="uid://bkgcy5mvx37sk" path="res://modules/gui/options/options.tscn" id="17"]
+[ext_resource type="Script" uid="uid://dxh1kyc6pixtf" path="res://modules/main_menu/headlines.gd" id="18"]
+[ext_resource type="FontFile" uid="uid://u4t8rmonqkyl" path="res://modules/gui/fonts/rubik/Rubik-SemiBold.ttf" id="19"]
+[ext_resource type="Texture2D" uid="uid://bpe60tolwfamg" path="res://modules/level/sky/Day Sun Peak Summersky.png" id="20"]
+[ext_resource type="PackedScene" uid="uid://i43biipayixi" path="res://modules/level/terrain_assets/meshes/rocks/prefabs/gray_stone/Cliff1.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://bmqde2otpkch8" path="res://modules/level/course_pieces/movement_pad/dash_pad/normal/dash_pad_normal.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://b4maxkd8afk2o" path="res://modules/level/terrain_assets/meshes/rocks/prefabs/gray_stone/Cliff2.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://drsx3nksnye7y" path="res://modules/level/props/static/hot_air_balloon/hot_air_balloon.glb" id="24"]
+[ext_resource type="PackedScene" uid="uid://vg3trt40tj3s" path="res://modules/level/props/static/lifesaver/lifesaver.tscn" id="25"]
+[ext_resource type="PackedScene" uid="uid://daqft5b5co0a7" path="res://modules/level/props/static/arrow_sign/arrow_sign.tscn" id="26"]
+[ext_resource type="PackedScene" uid="uid://c31ksd20bhlua" path="res://modules/level/props/static/boat/boat.tscn" id="27"]
+[ext_resource type="PackedScene" uid="uid://bwvgujjplt6qf" path="res://modules/level/terrain_assets/meshes/rocks/prefabs/gray_stone/Cliff4.tscn" id="28"]
+[ext_resource type="PackedScene" uid="uid://c071qhhbnsmdx" path="res://modules/level/terrain_assets/meshes/rocks/prefabs/gray_stone/Cliff6.tscn" id="29"]
+[ext_resource type="PackedScene" uid="uid://qloayfdwnccf" path="res://modules/level/terrain_assets/meshes/foliage/bush/bush.tscn" id="30"]
+[ext_resource type="PackedScene" uid="uid://d0jnj0yvg67d5" path="res://modules/level/terrain_assets/meshes/log/log.tscn" id="31"]
+[ext_resource type="PackedScene" uid="uid://cegjlf8mfif3c" path="res://modules/level/terrain_assets/meshes/rocks/prefabs/gray_stone/Boulder1.tscn" id="32"]
+[ext_resource type="PackedScene" uid="uid://dx2ungoq3u1op" path="res://modules/level/props/static/godot_plush/godot_plush V2.glb" id="33"]
+[ext_resource type="PackedScene" uid="uid://bjpgwxel30k7m" path="res://modules/racer/cpu_player/cpu_waypoint.tscn" id="34"]
+[ext_resource type="PackedScene" uid="uid://err3t1b11cyw" path="res://modules/level/water/ocean.tscn" id="35"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="36"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="37"]
+[ext_resource type="Script" uid="uid://b8hhnqsugykly" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="38"]
+[ext_resource type="Script" uid="uid://cuffvge5ad4aa" path="res://addons/phantom_camera/scripts/resources/phantom_camera_noise_3d.gd" id="39"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="40"]
+[ext_resource type="Terrain3DAssets" uid="uid://cv1o7fdkj83ls" path="res://modules/level/terrain_assets/master_terrain_assets.res" id="41"]
+[ext_resource type="PackedScene" uid="uid://djvpm408hgohy" path="res://modules/level/goal/finish_line.glb" id="42"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_58y3g"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8g7yq"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jaygg"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_166dh"]
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.2255, 0.376933, 0.55, 1)
+shader_parameter/color2 = Color(0.185, 0.332, 0.5, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uh26u"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxeth"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ee8yo"]
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.345098, 0.396078, 0.94902, 1)
+shader_parameter/color2 = Color(0.306, 0.351333, 0.85, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smcpy"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dttfc"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lh5xm"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4y1ta"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wqm21"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0.42, 0, 1)
+shader_parameter/color2 = Color(0.85, 0.396667, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rc00q"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.165, 0.9, 0, 1)
+shader_parameter/color2 = Color(0.1275, 0.85, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_252el"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rebi6"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4l0t3"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iatdp"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_573a8"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qqj"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxg2h"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xn5cn"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7xnhf"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4uvd0"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7v5sh"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_61e7f"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pv4ob"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="InputEventKey" id="InputEventKey_58y3g"]
+device = -1
+physical_keycode = 87
+unicode = 119
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_8g7yq"]
+device = -1
+axis = 5
+axis_value = 1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_jaygg"]
+device = -1
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_uh26u"]
+device = -1
+axis = 4
+axis_value = 1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_smcpy"]
+device = -1
+physical_keycode = 65
+unicode = 97
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_dttfc"]
+device = -1
+axis_value = -1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_lh5xm"]
+device = -1
+physical_keycode = 68
+unicode = 100
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_4y1ta"]
+device = -1
+axis_value = 1.0
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_252el"]
+device = -1
+button_mask = 1
+position = Vector2(135, 18)
+global_position = Vector2(144, 66)
+button_index = 1
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_rebi6"]
+device = -1
+pressed = true
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_4l0t3"]
+device = -1
+button_mask = 2
+position = Vector2(139, 6)
+global_position = Vector2(148, 54)
+button_index = 2
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_iatdp"]
+device = -1
+button_index = 1
+pressed = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wp7x3"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6gxa"]
+resource_local_to_scene = true
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.9, 0, 0, 1)
+shader_parameter/color2 = Color(0.85, 0, 0, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni28k"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyocs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jnqaf"]
+shader = ExtResource("4")
+shader_parameter/size = 65.0
+shader_parameter/color1 = Color(0.0962047, 0.0962048, 0.0962047, 1)
+shader_parameter/color2 = Color(0.147672, 0.147672, 0.147672, 1)
+shader_parameter/speed = 0.25
+shader_parameter/direction_x = 1.0
+shader_parameter/direction_y = 1.0
+shader_parameter/rotation_angle = 0.115
+shader_parameter/alpha = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnqaf"]
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_18dlr"]
+panorama = ExtResource("20")
+energy_multiplier = 1.1
+
+[sub_resource type="Sky" id="Sky_pv4ob"]
+sky_material = SubResource("PanoramaSkyMaterial_18dlr")
+
+[sub_resource type="Environment" id="Environment_aq377"]
+background_mode = 2
+background_energy_multiplier = 0.85
+sky = SubResource("Sky_pv4ob")
+sky_rotation = Vector3(0, 1.74533, 0)
+ambient_light_color = Color(0.75, 0.75, 0.75, 1)
+ambient_light_sky_contribution = 0.38
+ambient_light_energy = 1.05
+tonemap_mode = 3
+tonemap_white = 8.82
+glow_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.658, 0.6741, 0.7, 1)
+fog_light_energy = 1.65
+fog_density = 0.6421
+fog_sky_affect = 0.0
+fog_depth_begin = 150.0
+fog_depth_end = 1000.0
+adjustment_enabled = true
+adjustment_brightness = 1.08
+adjustment_contrast = 1.2
+adjustment_saturation = 1.2
+
+[sub_resource type="Animation" id="Animation_aq377"]
+resource_name = "Float"
+length = 4.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(160.302, 34.2722, 62.8501), Vector3(160.302, 38.2722, 62.8501), Vector3(160.302, 34.2722, 62.8501)]
+}
+
+[sub_resource type="Animation" id="Animation_w0r35"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(160.302, 34.2722, 62.8501)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w0r35"]
+_data = {
+&"Float": SubResource("Animation_aq377"),
+&"RESET": SubResource("Animation_w0r35")
+}
+
+[sub_resource type="Resource" id="Resource_aq377"]
+script = ExtResource("37")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="Resource" id="Resource_nlxfp"]
+script = ExtResource("38")
+keep_aspect = 1
+cull_mask = 1048575
+h_offset = 0.0
+v_offset = 0.0
+projection = 0
+fov = 60.0
+size = 1.0
+frustum_offset = Vector2(0, 0)
+near = 0.05
+far = 4000.0
+metadata/_custom_type_script = "uid://b8hhnqsugykly"
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_85lx7"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 1600.0
+dof_blur_far_transition = 8.0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 8.0
+dof_blur_near_transition = 8.0
+dof_blur_amount = 0.05
+
+[sub_resource type="Resource" id="Resource_mcinw"]
+script = ExtResource("39")
+amplitude = 1.5
+frequency = 0.1
+randomize_noise_seed = 1
+noise_seed = 0
+rotational_noise = true
+positional_noise = false
+rotational_multiplier_x = 1.0
+rotational_multiplier_y = 1.0
+rotational_multiplier_z = 1.0
+positional_multiplier_x = 1.0
+positional_multiplier_y = 1.0
+positional_multiplier_z = 1.0
+metadata/_custom_type_script = "uid://cuffvge5ad4aa"
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_573a8"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 1600.0
+dof_blur_far_transition = 8.0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 8.0
+dof_blur_near_transition = 8.0
+dof_blur_amount = 0.05
+
+[sub_resource type="Gradient" id="Gradient_wy1j6"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mcinw"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mhmp4"]
+seamless = true
+color_ramp = SubResource("Gradient_wy1j6")
+noise = SubResource("FastNoiseLite_mcinw")
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_cvdgu"]
+_shader_parameters = {
+&"bias_distance": 512.0,
+&"blend_sharpness": 0.5,
+&"depth_blur": 0.0,
+&"enable_macro_variation": true,
+&"enable_projection": true,
+&"flat_terrain_normals": false,
+&"macro_variation1": Color(1, 1, 1, 1),
+&"macro_variation2": Color(1, 1, 1, 1),
+&"macro_variation_slope": 0.333,
+&"mipmap_bias": 1.0,
+&"noise1_angle": 0.0,
+&"noise1_offset": Vector2(0.5, 0.5),
+&"noise1_scale": 0.04,
+&"noise2_scale": 0.076,
+&"noise_texture": SubResource("NoiseTexture2D_mhmp4"),
+&"projection_threshold": 0.8
+}
+
+[node name="MainMenu" type="Node"]
+
+[node name="LogoContainer" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.119
+anchor_right = 0.367
+anchor_bottom = 0.474
+offset_top = -0.520004
+offset_right = -0.640015
+offset_bottom = 0.0799561
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Logo" type="TextureRect" parent="LogoContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.104
+anchor_right = 1.0
+anchor_bottom = 0.927
+offset_top = -0.064003
+offset_bottom = 0.0320129
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(352, 198)
+texture = ExtResource("1")
+stretch_mode = 3
+
+[node name="MainMenuController" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchor_right = 0.367
+anchor_bottom = 1.0
+offset_right = -0.640015
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="Start" type="VBoxContainer" parent="MainMenuController"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.474
+anchor_right = 0.818
+anchor_bottom = 0.948
+offset_left = -0.128006
+offset_top = 0.0799561
+offset_right = 0.127991
+offset_bottom = 0.159912
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Play" parent="MainMenuController/Start" instance=ExtResource("3")]
+layout_mode = 2
+text = "Play"
+_toggle_panel_material = SubResource("ShaderMaterial_58y3g")
+
+[node name="Options" parent="MainMenuController/Start" instance=ExtResource("3")]
+layout_mode = 2
+text = "Options"
+_toggle_panel_material = SubResource("ShaderMaterial_8g7yq")
+
+[node name="Credits" parent="MainMenuController/Start" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+text = "Credits"
+_toggle_panel_material = SubResource("ShaderMaterial_jaygg")
+
+[node name="Wishlist" parent="MainMenuController/Start" instance=ExtResource("3")]
+layout_mode = 2
+text = "Wishlist now!"
+_default_panel_material = SubResource("ShaderMaterial_166dh")
+_focus_panel_material = SubResource("ShaderMaterial_166dh")
+_toggle_panel_material = SubResource("ShaderMaterial_uh26u")
+
+[node name="Discord" parent="MainMenuController/Start" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Discord"
+_default_panel_material = SubResource("ShaderMaterial_ee8yo")
+_focus_panel_material = SubResource("ShaderMaterial_ee8yo")
+_toggle_panel_material = SubResource("ShaderMaterial_smcpy")
+
+[node name="Quit" parent="MainMenuController/Start" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Quit"
+_toggle_panel_material = SubResource("ShaderMaterial_dttfc")
+
+[node name="Mode" type="VBoxContainer" parent="MainMenuController"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.474
+anchor_right = 0.818
+anchor_bottom = 0.948
+offset_left = -0.128006
+offset_top = 0.0799561
+offset_right = 0.127991
+offset_bottom = 0.159912
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Mode"]
+visible = false
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.392157)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 96
+text = "Mode"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Singleplayer" parent="MainMenuController/Mode" instance=ExtResource("3")]
+layout_mode = 2
+text = "Singleplayer"
+_toggle_panel_material = SubResource("ShaderMaterial_lh5xm")
+
+[node name="Multiplayer" parent="MainMenuController/Mode" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Multiplayer"
+_toggle_panel_material = SubResource("ShaderMaterial_4y1ta")
+
+[node name="Speedrun" parent="MainMenuController/Mode" instance=ExtResource("3")]
+layout_mode = 2
+text = "Speedrun"
+_default_panel_material = SubResource("ShaderMaterial_wqm21")
+_focus_panel_material = SubResource("ShaderMaterial_wqm21")
+_toggle_panel_material = SubResource("ShaderMaterial_rc00q")
+
+[node name="Panel" parent="MainMenuController/Mode/Speedrun" index="0"]
+material = ExtResource("6")
+
+[node name="Tutorial" parent="MainMenuController/Mode" instance=ExtResource("3")]
+layout_mode = 2
+text = "Tutorial"
+_toggle_panel_material = SubResource("ShaderMaterial_252el")
+
+[node name="StartBack" parent="MainMenuController/Mode" instance=ExtResource("3")]
+layout_mode = 2
+text = "Back"
+_toggle_panel_material = SubResource("ShaderMaterial_rebi6")
+
+[node name="Multiplayer" type="VBoxContainer" parent="MainMenuController"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.474
+anchor_right = 0.818
+anchor_bottom = 0.948
+offset_left = -0.128006
+offset_top = 0.0799561
+offset_right = 0.127991
+offset_bottom = 0.159912
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Multiplayer"]
+visible = false
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 64
+text = "Multiplayer"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Online" parent="MainMenuController/Multiplayer" instance=ExtResource("3")]
+layout_mode = 2
+disabled = true
+text = "Online"
+_toggle_panel_material = SubResource("ShaderMaterial_4l0t3")
+
+[node name="Local" parent="MainMenuController/Multiplayer" instance=ExtResource("3")]
+layout_mode = 2
+text = "Local"
+_toggle_panel_material = SubResource("ShaderMaterial_iatdp")
+
+[node name="LAN" parent="MainMenuController/Multiplayer" instance=ExtResource("3")]
+layout_mode = 2
+disabled = true
+text = "LAN"
+_toggle_panel_material = SubResource("ShaderMaterial_573a8")
+
+[node name="ModeBack" parent="MainMenuController/Multiplayer" instance=ExtResource("3")]
+layout_mode = 2
+text = "Back"
+_toggle_panel_material = SubResource("ShaderMaterial_q2qqj")
+
+[node name="OnlineMultiplayer" type="VBoxContainer" parent="MainMenuController"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.474
+anchor_right = 0.818
+anchor_bottom = 0.948
+offset_left = -0.128006
+offset_top = 0.0799561
+offset_right = 0.127991
+offset_bottom = 0.159912
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/OnlineMultiplayer"]
+visible = false
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 64
+text = "Online"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="OnlineHost" parent="MainMenuController/OnlineMultiplayer" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Host Lobby"
+_toggle_panel_material = SubResource("ShaderMaterial_uxg2h")
+
+[node name="OnlineFindLobbies" parent="MainMenuController/OnlineMultiplayer" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Find Lobbies"
+_toggle_panel_material = SubResource("ShaderMaterial_xn5cn")
+
+[node name="MultiplayerBack" parent="MainMenuController/OnlineMultiplayer" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Back"
+_toggle_panel_material = SubResource("ShaderMaterial_7xnhf")
+
+[node name="LANMultiplayer" type="VBoxContainer" parent="MainMenuController"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.474
+anchor_right = 0.818
+anchor_bottom = 0.948
+offset_left = -0.128006
+offset_top = 0.0799561
+offset_right = 0.127991
+offset_bottom = 0.159912
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/LANMultiplayer"]
+visible = false
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 64
+text = "LAN"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="LANHost" parent="MainMenuController/LANMultiplayer" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Host Lobby"
+_toggle_panel_material = SubResource("ShaderMaterial_4uvd0")
+
+[node name="LANFindLobbies" parent="MainMenuController/LANMultiplayer" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Find Lobbies"
+_toggle_panel_material = SubResource("ShaderMaterial_7v5sh")
+
+[node name="MultiplayerBack" parent="MainMenuController/LANMultiplayer" instance=ExtResource("3")]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Back"
+_toggle_panel_material = SubResource("ShaderMaterial_61e7f")
+
+[node name="Tutorial" type="Control" parent="MainMenuController"]
+visible = false
+layout_mode = 1
+anchor_left = 0.091
+anchor_top = 0.444
+anchor_right = 0.909
+anchor_bottom = 0.919
+offset_left = -0.064003
+offset_top = 0.47995
+offset_right = 0.0639648
+offset_bottom = -0.52002
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MainMenuController/Tutorial"]
+material = ExtResource("7")
+clip_contents = true
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 0.75
+offset_bottom = -3.05176e-05
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_pv4ob")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuController/Tutorial/Panel"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 0.75
+offset_bottom = 84.0
+alignment = 1
+
+[node name="Accelerate" type="HBoxContainer" parent="MainMenuController/Tutorial/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Accelerate"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Accelerate -"
+
+[node name="ActionPrompt" type="TextureRect" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Accelerate"]
+layout_mode = 2
+texture = ExtResource("8")
+stretch_mode = 5
+script = ExtResource("9")
+action = "accelerate"
+icon = 0
+events = Array[InputEvent]([SubResource("InputEventKey_58y3g"), SubResource("InputEventJoypadMotion_8g7yq")])
+metadata/_custom_type_script = "uid://devf7a3o1o15i"
+
+[node name="Decelerate" type="HBoxContainer" parent="MainMenuController/Tutorial/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Decelerate"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Decelerate -"
+
+[node name="ActionPrompt" type="TextureRect" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Decelerate"]
+layout_mode = 2
+texture = ExtResource("10")
+stretch_mode = 5
+script = ExtResource("9")
+action = "decelerate"
+icon = 0
+events = Array[InputEvent]([SubResource("InputEventKey_jaygg"), SubResource("InputEventJoypadMotion_uh26u")])
+metadata/_custom_type_script = "uid://devf7a3o1o15i"
+
+[node name="Steer" type="HBoxContainer" parent="MainMenuController/Tutorial/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Steer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Steer - "
+
+[node name="ActionPrompt" type="TextureRect" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Steer"]
+layout_mode = 2
+texture = ExtResource("11")
+stretch_mode = 5
+script = ExtResource("9")
+action = "steer_left"
+icon = 0
+events = Array[InputEvent]([SubResource("InputEventKey_smcpy"), SubResource("InputEventJoypadMotion_dttfc")])
+metadata/_custom_type_script = "uid://devf7a3o1o15i"
+
+[node name="Slash" type="Label" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Steer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "/"
+
+[node name="ActionPrompt2" type="TextureRect" parent="MainMenuController/Tutorial/Panel/VBoxContainer/Steer"]
+layout_mode = 2
+texture = ExtResource("12")
+stretch_mode = 5
+script = ExtResource("9")
+action = "steer_right"
+icon = 0
+events = Array[InputEvent]([SubResource("InputEventKey_lh5xm"), SubResource("InputEventJoypadMotion_4y1ta")])
+metadata/_custom_type_script = "uid://devf7a3o1o15i"
+
+[node name="UseGadget" type="HBoxContainer" parent="MainMenuController/Tutorial/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Tutorial/Panel/VBoxContainer/UseGadget"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Activate Gadget -"
+
+[node name="ActionPrompt" type="TextureRect" parent="MainMenuController/Tutorial/Panel/VBoxContainer/UseGadget"]
+layout_mode = 2
+texture = ExtResource("13")
+stretch_mode = 5
+script = ExtResource("9")
+action = "activate_attachment"
+icon = 0
+events = Array[InputEvent]([SubResource("InputEventMouseButton_252el"), SubResource("InputEventJoypadButton_rebi6")])
+metadata/_custom_type_script = "uid://devf7a3o1o15i"
+
+[node name="DetachGadget" type="HBoxContainer" parent="MainMenuController/Tutorial/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenuController/Tutorial/Panel/VBoxContainer/DetachGadget"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Detach Gadget -"
+
+[node name="ActionPrompt" type="TextureRect" parent="MainMenuController/Tutorial/Panel/VBoxContainer/DetachGadget"]
+layout_mode = 2
+texture = ExtResource("14")
+stretch_mode = 5
+script = ExtResource("9")
+action = "detach_attachment"
+icon = 0
+events = Array[InputEvent]([SubResource("InputEventMouseButton_4l0t3"), SubResource("InputEventJoypadButton_iatdp")])
+metadata/_custom_type_script = "uid://devf7a3o1o15i"
+
+[node name="ModeBack" parent="MainMenuController/Tutorial" instance=ExtResource("3")]
+layout_mode = 2
+anchor_top = 0.854
+offset_left = 64.0
+offset_top = -0.248016
+offset_right = -64.0
+offset_bottom = 1.0
+text = "Back"
+_toggle_panel_material = SubResource("ShaderMaterial_wp7x3")
+
+[node name="OnlineLobbyMenu" parent="MainMenuController" instance=ExtResource("15")]
+layout_mode = 1
+
+[node name="Credits" type="Label" parent="MainMenuController"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16")
+theme_override_font_sizes/font_size = 64
+text = "A game by
+Nathan Crain
+
+Music by
+Griffin Andrews"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsBack" parent="MainMenuController/Credits" instance=ExtResource("3")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+offset_left = 832.0
+offset_top = -184.0
+offset_right = -832.0
+offset_bottom = -120.0
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cxeth")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxeth")
+text = "Back"
+_toggle_panel_material = SubResource("ShaderMaterial_r6gxa")
+
+[node name="Options" parent="MainMenuController" instance=ExtResource("17")]
+visible = false
+layout_mode = 1
+
+[node name="VersionPanel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.919
+anchor_right = 0.983
+anchor_bottom = 0.978
+offset_left = -0.00012207
+offset_top = -0.519958
+offset_right = 0.639893
+offset_bottom = -0.23999
+theme_override_styles/panel = SubResource("StyleBoxFlat_ni28k")
+
+[node name="Version" type="Label" parent="VersionPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("16")
+theme_override_font_sizes/font_size = 32
+text = "v"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Headlines" type="Panel" parent="."]
+material = ExtResource("7")
+clip_contents = true
+anchors_preset = -1
+anchor_top = 0.963
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.0400391
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vyocs")
+script = ExtResource("18")
+headlines = Array[String](["Nitro Turtles League to Conduct Research Into Harmful Side Effects of Performance-Enhancing Seaweed", "Highly Scientific Study Shows That Turtles are the Fastest Animals", "League Safety Committee Finds Dangerous Traps in the Ancient Turtle Ruins", "Speed Gadget Usage on Dash Pads Shown to Increase Speed Significantly", "Turtle Fined 200 Seashells for Walking on Course During a Race", "Report: Eating Sand has Negative Side Effects for Racing", "Swimming is Reportedly 150% Faster than Running", "Report: Seagulls Completely Eradicated from all Race Courses", "Shark Sightings at All-Time Low", "Nitro Turtle Fined 500 Seashells for Commiting Identity Fraud by Swapping Shell", "Reminder: Illegal Headstarts may Result in Expulsion From the League", "Cheater Turtle Found Applying Trace Amounts of Tar Under Opponent's Shell", "Survey Results Reveal That Turtles are Awesome", "Major League Sponsor Withdraws After Seashell Economy Crashes", "Creating More Fake Seashells for Everyone Actually Doesn't Make Everyone Richer, Report Suggests", "Report: No Nitro Turtle Thinks They're Slow, Yet Many Are", "Seashell Betting now Illegal", "Insider: The Most Elite Nitro Turtles may Soon Race in Space", "Performance-Enhancing Seaweed May Have Negative Side Effects, Experts Warn"])
+speed = -80.0
+
+[node name="HeadlineLabel" type="Label" parent="Headlines"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19")
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_jnqaf")
+anchors_preset = -1
+anchor_left = 0.733
+anchor_top = 0.296
+anchor_right = 0.967
+anchor_bottom = 0.83
+offset_left = 0.639771
+offset_top = 0.320007
+offset_right = -0.640137
+offset_bottom = -0.400024
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jnqaf")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = -32.0001
+offset_bottom = -31.9999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Welcome to the Nitro Turtles demo!
+
+Make sure to wishlist the game on Steam and join the community on Discord!
+
+Please report any issues or bugs.
+
+- Lucky Turtle"
+autowrap_mode = 3
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Background"]
+environment = SubResource("Environment_aq377")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Background"]
+transform = Transform3D(0.707107, 0.612372, -0.353554, -7.34076e-15, 0.5, 0.866025, 0.707107, -0.612372, 0.353554, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 1.0
+
+[node name="Props" type="Node3D" parent="Background"]
+
+[node name="Cliff1" parent="Background/Props" instance=ExtResource("21")]
+transform = Transform3D(3.61159, 0, -2.65133, 0, 4.48031, 0, 2.65133, 0, 3.61159, 134.807, -11.8239, 108.868)
+
+[node name="DashPad" parent="Background/Props" instance=ExtResource("22")]
+transform = Transform3D(-0.691521, 0.251053, -0.677326, 0.0859992, 0.959607, 0.26788, 0.717218, 0.126995, -0.685178, 105.949, 11.9979, 122.565)
+
+[node name="DashPad2" parent="Background/Props" instance=ExtResource("22")]
+transform = Transform3D(0.439075, -0.332223, 0.834771, 0.557522, 0.829345, 0.0368172, -0.704544, 0.449237, 0.549367, 178.25, 13.9345, 87.065)
+
+[node name="Cliff2" parent="Background/Props" instance=ExtResource("23")]
+transform = Transform3D(2.58961, 0, 0.815259, 0, 2.71491, 0, -0.815259, 0, 2.58961, 187.641, -7.08805, 136.652)
+
+[node name="hot_air_balloon" parent="Background/Props" instance=ExtResource("24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160.302, 34.2722, 62.8501)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Props/hot_air_balloon"]
+libraries = {
+&"": SubResource("AnimationLibrary_w0r35")
+}
+speed_scale = 0.25
+
+[node name="Lifesaver2" parent="Background/Props" instance=ExtResource("25")]
+transform = Transform3D(0.954611, 0.297608, -0.0121219, -0.280374, 0.884105, -0.373829, -0.100538, 0.36026, 0.927418, 125.481, 11.1623, 113.013)
+
+[node name="ArrowSign" parent="Background/Props" instance=ExtResource("26")]
+transform = Transform3D(0.945035, 0, -0.326971, 0, 1, 0, 0.326971, 0, 0.945035, 164.382, 15.8932, 125.971)
+
+[node name="ArrowSign2" parent="Background/Props" instance=ExtResource("26")]
+transform = Transform3D(-0.313848, -0.0161123, -0.949336, -0.108239, 0.993945, 0.018914, 0.943283, 0.108691, -0.313692, 94.3513, 15.059, 88.7331)
+
+[node name="Boat" parent="Background/Props" instance=ExtResource("27")]
+transform = Transform3D(-0.895722, 0.218722, -0.387095, 0.1326, 0.962425, 0.236972, 0.424381, 0.160932, -0.891068, 91.5856, 13.5449, 126.647)
+
+[node name="Cliff4" parent="Background/Props" instance=ExtResource("28")]
+transform = Transform3D(3.71435, 0, -1.52761, 0, 4.01621, 0, 1.52761, 0, 3.71435, 151.034, 4.82094, 121.291)
+
+[node name="Cliff6" parent="Background/Props" instance=ExtResource("29")]
+transform = Transform3D(2.41811, 0, -1.58231, 0, 2.8898, 0, 1.58231, 0, 2.41811, 159.636, -6.8217, 126.976)
+
+[node name="Bush2" parent="Background/Props" instance=ExtResource("30")]
+transform = Transform3D(0.276663, -0.0344078, 0.960351, 0.185682, 0.98244, -0.0182933, -0.942857, 0.183381, 0.278194, 95.8545, 10.7826, 137.947)
+
+[node name="Bush3" parent="Background/Props" instance=ExtResource("30")]
+transform = Transform3D(0.289629, -0.00902529, 0.957097, 0.176859, 0.983241, -0.044248, -0.940657, 0.182087, 0.286372, 168.389, 19.8097, 60.8068)
+
+[node name="Log" parent="Background/Props" instance=ExtResource("31")]
+transform = Transform3D(0.920295, 0.0591465, 0.386729, -0.0149584, 0.993103, -0.116289, -0.39094, 0.101235, 0.914832, 119.409, 12.8658, 109.431)
+
+[node name="Log3" parent="Background/Props" instance=ExtResource("31")]
+transform = Transform3D(0.999872, 0.0155178, 0.00390671, -0.0149584, 0.993103, -0.116289, -0.0056843, 0.116216, 0.993208, 91.2219, 16.1179, 108.405)
+
+[node name="Log2" parent="Background/Props" instance=ExtResource("31")]
+transform = Transform3D(0.436382, -0.0520509, 1.08414, 0.031696, 1.1686, 0.0433476, -1.08493, 0.0132045, 0.437332, 173.929, 10.0578, 139.993)
+
+[node name="Boulder1" parent="Background/Props" instance=ExtResource("32")]
+transform = Transform3D(-1.51523, 0.113625, 1.33793, 0.164171, 2.01785, 0.0145594, -1.33267, 0.119388, -1.51941, 107.565, 8.53092, 149.384)
+
+[node name="Boulder2" parent="Background/Props" instance=ExtResource("32")]
+transform = Transform3D(-1.51523, 0.113625, 1.33793, 0.164171, 2.01785, 0.0145594, -1.33267, 0.119388, -1.51941, 157.522, 18.0559, 52.294)
+
+[node name="godot_plush V2" parent="Background/Props" instance=ExtResource("33")]
+transform = Transform3D(-7.74647, 1.79399, -0.879568, 1.61014, 7.69043, 1.50491, 1.18301, 1.28019, -7.80779, 125.665, 11.141, 114.242)
+
+[node name="CPUs" type="Node3D" parent="Background"]
+
+[node name="CPUWaypoints" type="Node3D" parent="Background"]
+
+[node name="CpuWaypoint" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 15, 137)
+
+[node name="CpuWaypoint2" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 13, 147)
+
+[node name="CpuWaypoint3" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161, 13, 159)
+
+[node name="CpuWaypoint18" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 13, 155)
+
+[node name="CpuWaypoint19" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130, 15, 143)
+
+[node name="CpuWaypoint20" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 17, 128)
+
+[node name="CpuWaypoint21" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 19, 97)
+
+[node name="CpuWaypoint22" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110, 19, 74)
+
+[node name="CpuWaypoint4" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195, 13, 178)
+
+[node name="CpuWaypoint16" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178, 13, 166)
+
+[node name="CpuWaypoint17" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207, 13, 175)
+
+[node name="CpuWaypoint27" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213, 13, 163)
+
+[node name="CpuWaypoint5" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218, 13, 151)
+
+[node name="CpuWaypoint6" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216, 13, 133)
+
+[node name="CpuWaypoint25" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 214, 13, 121)
+
+[node name="CpuWaypoint26" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218, 13, 141)
+
+[node name="CpuWaypoint7" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207, 13, 110)
+
+[node name="CpuWaypoint13" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199, 13, 103)
+
+[node name="CpuWaypoint14" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173, 15, 83)
+
+[node name="CpuWaypoint15" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 15, 68)
+
+[node name="CpuWaypoint8" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 189.617, 13, 95.7094)
+
+[node name="CpuWaypoint23" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180.617, 15.3572, 88.7094)
+
+[node name="CpuWaypoint24" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 149.617, 16, 71.7094)
+
+[node name="CpuWaypoint9" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 159.617, 17, 77.7094)
+
+[node name="CpuWaypoint10" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.617, 17, 66.7094)
+
+[node name="CpuWaypoint11" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.6168, 17, 82.7094)
+
+[node name="CpuWaypoint12" parent="Background/CPUWaypoints" instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.617, 17, 114.709)
+
+[node name="Ocean" parent="Background" instance=ExtResource("35")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, 10, 768)
+
+[node name="MenuCameraView" type="Node3D" parent="Background"]
+transform = Transform3D(0.855463, 0, 0.517864, 0, 1, 0, -0.517864, 0, 0.855463, 175.81, 12.8581, 170.591)
+script = ExtResource("36")
+tween_resource = SubResource("Resource_aq377")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_nlxfp")
+attributes = SubResource("CameraAttributesPractical_85lx7")
+noise = SubResource("Resource_mcinw")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="MainCamera" type="Camera3D" parent="Background"]
+transform = Transform3D(0.852215, -0.0041841, 0.523176, 0.00698211, 0.99997, -0.00337607, -0.523146, 0.00653, 0.852218, 175.81, 12.8581, 170.591)
+attributes = SubResource("CameraAttributesPractical_573a8")
+fov = 60.0
+
+[node name="PhantomCameraHost" type="Node" parent="Background/MainCamera"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("40")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Terrain3D" type="Terrain3D" parent="Background"]
+data_directory = "res://modules/level/terrain_data/menu"
+material = SubResource("Terrain3DMaterial_cvdgu")
+assets = ExtResource("41")
+collision_mode = 3
+mesh_lods = 4
+mesh_size = 64
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="finish_line" parent="Background" instance=ExtResource("42")]
+transform = Transform3D(0.501677, 0, 0.865055, 0, 1, 0, -0.865055, 0, 0.501677, 177.329, 10.8171, 163.229)
+
+[connection signal="pressed" from="MainMenuController/Start/Play" to="MainMenuController" method="_on_play_pressed"]
+[connection signal="pressed" from="MainMenuController/Start/Options" to="MainMenuController" method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenuController/Start/Credits" to="MainMenuController" method="_on_credits_pressed"]
+[connection signal="pressed" from="MainMenuController/Start/Wishlist" to="MainMenuController" method="_on_wishlist_pressed"]
+[connection signal="pressed" from="MainMenuController/Start/Discord" to="MainMenuController" method="_on_discord_pressed"]
+[connection signal="pressed" from="MainMenuController/Start/Quit" to="MainMenuController" method="_on_quit_pressed"]
+[connection signal="pressed" from="MainMenuController/Mode/Singleplayer" to="MainMenuController" method="_on_singleplayer_pressed"]
+[connection signal="pressed" from="MainMenuController/Mode/Multiplayer" to="MainMenuController" method="_on_multiplayer_pressed"]
+[connection signal="pressed" from="MainMenuController/Mode/Speedrun" to="MainMenuController" method="_on_speedrun_pressed"]
+[connection signal="pressed" from="MainMenuController/Mode/Tutorial" to="MainMenuController" method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MainMenuController/Mode/StartBack" to="MainMenuController" method="_on_start_back_pressed"]
+[connection signal="pressed" from="MainMenuController/Multiplayer/Online" to="MainMenuController" method="_on_online_pressed"]
+[connection signal="pressed" from="MainMenuController/Multiplayer/Local" to="MainMenuController" method="_on_local_pressed"]
+[connection signal="pressed" from="MainMenuController/Multiplayer/LAN" to="MainMenuController" method="_on_lan_pressed"]
+[connection signal="pressed" from="MainMenuController/Multiplayer/ModeBack" to="MainMenuController" method="_on_mode_back_pressed"]
+[connection signal="pressed" from="MainMenuController/OnlineMultiplayer/OnlineHost" to="MainMenuController" method="_on_online_host_pressed"]
+[connection signal="pressed" from="MainMenuController/OnlineMultiplayer/OnlineFindLobbies" to="MainMenuController" method="_on_online_find_lobbies_pressed"]
+[connection signal="pressed" from="MainMenuController/OnlineMultiplayer/MultiplayerBack" to="MainMenuController" method="_on_multiplayer_back_pressed"]
+[connection signal="pressed" from="MainMenuController/LANMultiplayer/LANHost" to="MainMenuController" method="_on_lan_host_pressed"]
+[connection signal="pressed" from="MainMenuController/LANMultiplayer/LANFindLobbies" to="MainMenuController" method="_on_lan_find_lobbies_pressed"]
+[connection signal="pressed" from="MainMenuController/LANMultiplayer/MultiplayerBack" to="MainMenuController" method="_on_multiplayer_back_pressed"]
+[connection signal="pressed" from="MainMenuController/Tutorial/ModeBack" to="MainMenuController" method="_on_mode_back_pressed"]
+[connection signal="pressed" from="MainMenuController/Credits/CreditsBack" to="MainMenuController" method="_on_credits_back_pressed"]
+[connection signal="exit_options" from="MainMenuController/Options" to="MainMenuController" method="_on_options_exit_options"]
+[connection signal="mouse_entered" from="Headlines" to="Headlines" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Headlines" to="Headlines" method="_on_mouse_exited"]
+
+[editable path="MainMenuController/Start/Wishlist"]
+[editable path="MainMenuController/Start/Discord"]
+[editable path="MainMenuController/Mode/Speedrun"]

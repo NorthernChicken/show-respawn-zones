@@ -1,0 +1,36 @@
+[gd_resource type="ShaderMaterial" load_steps=8 format=3 uid="uid://d4a75fsa473rs"]
+
+[ext_resource type="Shader" uid="uid://buq0np61u4jxk" path="res://modules/shell_attachment/shell_attachments/seaweed/seaweed.gdshader" id="1"]
+
+[sub_resource type="Gradient" id="Gradient_gex0r"]
+colors = PackedColorArray(0.00833333, 0.5, 0, 1, 0.52, 0.78, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1mhqp"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q5coj"]
+width = 256
+height = 256
+seamless = true
+color_ramp = SubResource("Gradient_gex0r")
+noise = SubResource("FastNoiseLite_1mhqp")
+
+[sub_resource type="Gradient" id="Gradient_b246j"]
+colors = PackedColorArray(0.597176, 0.597176, 0.597176, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gex0r"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1mhqp"]
+as_normal_map = true
+bump_strength = 4.0
+color_ramp = SubResource("Gradient_b246j")
+noise = SubResource("FastNoiseLite_gex0r")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_q5coj")
+shader_parameter/wave_amplitude = 0.012
+shader_parameter/wave_speed = 2.5
+shader_parameter/brightness_factor = 0.8
+shader_parameter/normal_scroll_speed = 0.325
+shader_parameter/normal_map = SubResource("NoiseTexture2D_1mhqp")
